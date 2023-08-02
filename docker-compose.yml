@@ -1,15 +1,25 @@
 services:
     mysql:
-        image: mysql
+        image: mysql:latest
+        restart: always
         env_file:
             - ./admin/src/config/.env
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
             MYSQL_DATABASE: ${DB_NAME}
         volumes:
-            - ./data:/var/lib/mysql
+            - ./mysqlData:/var/lib/mysql
         ports:
             - "3306:3306"
+    mongo:
+        image: mongo:latest
+        restart: always
+        env_file:
+            - ./main/src/config/.env
+        volumes:
+            - ./mongoData:/data/db
+        ports:
+            - "27017:27017"
 
     # rabbitmq:
     #     image: rabbitmq
