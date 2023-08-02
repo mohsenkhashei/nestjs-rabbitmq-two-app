@@ -4,8 +4,8 @@ import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { configValidationSchema } from './config/config.schema';
-import { TypeOrmConfigService } from './config/typeorm.config';
+import { configValidationSchema } from './config/validation.config.schema';
+import { TypeOrmConfigService } from './config/typeorm.config.service';
 
 @Module({
   imports: [
