@@ -10,7 +10,7 @@ Schema below:
 
 ## Installation
 
-cd to each app to run seprately
+cd to each app to run separately
 
 ```bash
 # for running Mysql & Mongo & RabbitMQ
